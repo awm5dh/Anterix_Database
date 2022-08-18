@@ -1,5 +1,4 @@
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import mechanize
 import pandas as pd
 from bs4 import BeautifulSoup
 import regex as re
@@ -436,7 +435,7 @@ def get_result():
         ],
     )
 
-    writer = pd.ExcelWriter("Anterix_Applications_220817.xlsx", engine="xlsxwriter")
+    writer = pd.ExcelWriter("Anterix_Applications_220818.xlsx", engine="xlsxwriter")
     new_frame.to_excel(writer, sheet_name="New Licenses", index=False)
     new_lease_frame.to_excel(writer, sheet_name="New Leases", index=False)
     assign_auth_frame.to_excel(
